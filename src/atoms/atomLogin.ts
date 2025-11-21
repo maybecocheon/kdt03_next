@@ -1,14 +1,13 @@
-import { atom } from "jotai"
+import { atom } from "jotai";
 
-// localStorage에서 초기값 꺼내기
-const savedLogin = JSON.parse(localStorage.getItem("login") ?? "0");
-const savedUser = JSON.parse(localStorage.getItem("user_name") ?? '""');
-
-export const isLoginAtom = atom<boolean>(savedLogin === 1);
+// 기본값은 서버에서도 안전한 값으로 설정
+export const isLoginAtom = atom<boolean>(false);
 
 interface User {
   user_metadata: { user_name: string }
 }
+
+// 기본 유저 정보
 export const userAtom = atom<User>({
-  user_metadata: { user_name: savedUser }
+  user_metadata: { user_name: "" }
 });

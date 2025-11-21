@@ -31,19 +31,18 @@ function Login() {
 
     // session 상태 변경될 때 로그인 변수 변경
     useEffect(() => {
-        // 세션이 있으면 user 정보를, 없으면 null을 user state에 저장
         if (session) {
             localStorage.setItem("user_name", JSON.stringify(session?.user?.user_metadata?.user_name || null));
             localStorage.setItem("login", JSON.stringify(1));
-            setIsLogin(true);  
+            setIsLogin(true);
             setUser({ user_metadata: { user_name: session.user?.user_metadata?.user_name ?? "" } });
         } else {
             localStorage.setItem("user_name", JSON.stringify(""));
             localStorage.setItem("login", JSON.stringify(0));
-            setIsLogin(false); 
+            setIsLogin(false);
             setUser({ user_metadata: { user_name: "" } });
         }
-    }, [session])
+    }, [session]);
 
     // GitHub OAuth를 사용하여 로그인하는 비동기 함수
     const signInWithGithub = async () => {
