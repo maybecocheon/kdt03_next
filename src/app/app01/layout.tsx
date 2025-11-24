@@ -11,8 +11,12 @@ export default function App01Layout({ children, }: {children: React.ReactNode;})
                         <li className="hover:text-gray-200 hover:cursor-pointer">
                             <Link href="/app01/junggu">중구</Link>
                         </li>
-                        <li className="hover:text-gray-200 hover:cursor-pointer">서구</li>
-                        <li className="hover:text-gray-200 hover:cursor-pointer">동구</li>
+                        <li className="hover:text-gray-200 hover:cursor-pointer">
+                            <Link href="/app01/seogu">서구</Link>
+                        </li>
+                        <li className="hover:text-gray-200 hover:cursor-pointer">
+                            <Link href="/app01/donggu">동구</Link>
+                        </li>
                     </ul>
                 </nav>
             </aside>
