@@ -30,23 +30,23 @@ export default async function RestaurantDetail({ params }: RestaurantDetailProps
             <p className="text-gray-600 text-lg">{restaurant?.GUGUN_NM}</p>
             <img src={restaurant?.MAIN_IMG_NORMAL || undefined} alt={restaurant?.MAIN_TITLE} className="rounded-2xl" />
             <div className="w-full flex flex-col items-center justify-center mt-5">
-                <div className="w-full flex flex-wrap items-end mb-5">
-                    <div className="w-100 mr-2">
+                <div className="w-full flex flex-wrap justify-between items-end mb-5">
+                    <div className="w-110 mr-2">
                         <p className="text-gray-500">주소</p>
                         <p>{restaurant?.ADDR1}</p>
                         <p className="w-9/10 border-b border-gray-300 my-3 border-2"></p>
                     </div>
-                    <div className="w-100">
+                    <div className="w-110">
                         <p className="text-gray-500">연락처</p>
                         <p>{restaurant?.CNTCT_TEL}</p>
                         <p className="w-full border-b border-gray-300 my-3 border-2"></p>
                     </div>
-                    <div className="w-100 mr-2">
+                    <div className="w-110 mr-2">
                         <p className="text-gray-500">대표 메뉴</p>
                         <p>{restaurant?.RPRSNTV_MENU}</p>
                         <p className="w-9/10 border-b border-gray-300 my-3 border-2"></p>
                     </div>
-                    <div className="w-100">
+                    <div className="w-110">
                         <p className="text-gray-500">운영 시간</p>
                         <p>{usageTime}</p>
                         <p className="w-full border-b border-gray-300 my-3 border-2"></p>
