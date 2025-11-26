@@ -41,7 +41,7 @@ export default function RouteNav() {
                 <div className="w-full h-1/2 mt-5 flex justify-center items-center gap-4 font-bold bg-blue-500 rounded-md p-3 ">
                     <Link href="/lotto" className="hover:cursor-pointer hover:text-gray-300">로또</Link>
                     <Link href="/festival" className="hover:cursor-pointer hover:text-gray-300">부산축제정보</Link>
-                    <Link href="/todolist" className="hover:cursor-pointer hover:text-gray-300">할일목록</Link>
+                    <Link href="/todolist_json" className="hover:cursor-pointer hover:text-gray-300">할일목록</Link>
                     <Link href="/restaurant" className="hover:cursor-pointer hover:text-gray-300">맛집</Link>
                 </div>
                 <div className="w-50 h-1/2 mt-5 flex justify-center items-center gap-4 bg-blue-100 rounded-md p-1 ml-3 text-black">
